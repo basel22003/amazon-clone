@@ -3,19 +3,21 @@ import "./checkoutproduct.css";
 import { useStateValue } from "./StateProvider";
 
 function CheckoutProduct({ id, image, title, price, rating }) {
+  /*eslint-disable no-unused-vars*/
 
-      const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
+  /*eslint-disable no-unused-vars*/
 
-const removeFromBasket = () => {
-     dispatch({
-         type: "REMOVE_FROM_BASKET",
-         id: id,
-     })
-}
+  const removeFromBasket = () => {
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id: id,
+    });
+  };
 
   return (
     <div className="checkoutproduct">
-      <img className="checkoutproduct-image" src={image} />
+      <img className="checkoutproduct-image" src={image} alt="" />
       <div className="checkoutproduct-info">
         <p className="checkoutproduct-title">{title}</p>
         <p className="checkoutproduct-price">

@@ -3,7 +3,10 @@ import "./product.css";
 import { useStateValue } from "./StateProvider";
 
 function Product({ id, title, image, price, rating }) {
+  /*eslint-disable no-unused-vars*/
+
   const [{ basket }, dispatch] = useStateValue();
+  /*eslint-disable no-unused-vars*/
 
   const addToBasket = () => {
     dispatch({

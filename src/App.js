@@ -8,7 +8,9 @@ import Login from "./Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 function App() {
+  /*eslint-disable no-unused-vars*/
   const [{ user }, dispatch] = useStateValue();
+  /*eslint-disable no-unused-vars*/
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       console.log("The user is >>>", authUser);
@@ -19,13 +21,13 @@ function App() {
           user: authUser,
         });
       } else {
-        dispatch({
+        dispatch({    
           type: "SET_USER",
           user: null,
         });
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <Router>

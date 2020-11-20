@@ -7,7 +7,11 @@ import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 
 function Header() {
+  /*eslint-disable no-unused-vars*/
+
   const [{ basket, user }, dispatch] = useStateValue();
+  /*eslint-disable no-unused-vars*/
+
   const handleAuthentication = () => {
     if (user) {
       auth.signOut();
